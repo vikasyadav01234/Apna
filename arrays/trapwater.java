@@ -26,8 +26,8 @@ public class trapwater {
     }
     public static void main(String arg[]){
         Scanner sc = new Scanner(System.in);
-        int arr[]=new int[7];
-        for(int i=0;i<7;i++){
+        int arr[]=new int[13];
+        for(int i=0;i<13;i++){
             arr[i]=sc.nextInt();
         }
         water(arr);
