@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class vikas {
     public static int maximum(int mat[][]){
-        int maximum = 0;
+        int maximum = Integer.MIN_VALUE;
         for(int i=0;i<mat.length;i++){
             for(int j=0;j<mat[0].length;j++){
                 if(mat[i][j]>maximum){
@@ -11,6 +11,18 @@ public class vikas {
             }
         }
         return maximum;
+    }
+    public static int minimum(int mat[][]){
+        int minimum = Integer.MAX_VALUE;
+        for(int i=0;i<mat.length;i++){
+            for(int j=0;j<mat[0].length;j++){
+                if(minimum>mat[i][j]){
+                    minimum = mat[i][j];
+                    
+                }
+            }
+        }
+        return minimum;
     }
     public static void search(int mat[][] ,int k){
         for (int i=0;i<mat.length;i++){
@@ -43,5 +55,6 @@ public class vikas {
         int k = sc.nextInt();
         search(a, k);
         System.out.print("Maximum Number in the matrix: "+maximum(a));
+        System.out.println("Minimum Number in the matrix: "+minimum(a));
     }
 }
