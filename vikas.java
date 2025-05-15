@@ -1,6 +1,17 @@
 import java.util.Scanner;   
 
 public class vikas {
+    public static int maximum(int mat[][]){
+        int maximum = 0;
+        for(int i=0;i<mat.length;i++){
+            for(int j=0;j<mat[0].length;j++){
+                if(mat[i][j]>maximum){
+                    maximum = mat[i][j];
+                }
+            }
+        }
+        return maximum;
+    }
     public static void search(int mat[][] ,int k){
         for (int i=0;i<mat.length;i++){
             for (int j = 0;j<mat[0].length;j++){
@@ -31,5 +42,6 @@ public class vikas {
         System.out.print("Enter a number search in matrix");
         int k = sc.nextInt();
         search(a, k);
+        System.out.print("Maximum Number in the matrix: "+maximum(a));
     }
 }
