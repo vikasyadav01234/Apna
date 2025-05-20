@@ -7,9 +7,9 @@ public class binerystring {
             return;
         }
 
-        last(n-1,0,bs+"0");
-        if (lp == 0) {
-            last(n-1,1,bs+"1");
+        last(n-1,1,bs+"1");
+        if (lp == 1) {
+            last(n-1,0,bs+"0");
         }
     }
     public static void main(String [] args){
